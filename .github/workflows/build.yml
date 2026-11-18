@@ -31,6 +31,8 @@ jobs:
         echo "android.minapi = 24" >> buildozer.spec
         echo "android.archs = arm64-v8a, armeabi-v7a" >> buildozer.spec
         echo "android.ndk = 25b" >> buildozer.spec
+        echo "android.ndk_path = /usr/local/lib/android/sdk/ndk/25.2.9519653" >> buildozer.spec
+        echo "android.sdk_path = /usr/local/lib/android/sdk" >> buildozer.spec
         echo "log_level = 2" >> buildozer.spec
         yes | buildozer -v android debug
     - name: Upload APK
